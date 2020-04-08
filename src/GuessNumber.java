@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class GuessNumber extends JFrame implements ActionListener {
 
-    JLabel display = new JLabel("");
+    JLabel display = new JLabel("Guess a number between 1 and 10");
     int guess;
     Random generator = new Random();
     int number = generator.nextInt(10) + 1;
@@ -43,6 +43,7 @@ public class GuessNumber extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String currentButton = e.getActionCommand();
+        display.setText("");
         switch (currentButton){
             case "0": case "1": case "2": case "3": case "4":
             case "5": case "6": case "7": case "8": case "9":
